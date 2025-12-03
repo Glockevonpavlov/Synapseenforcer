@@ -14,7 +14,7 @@ Unlike standard prompts that rely on the LLM's probability distribution, this fr
 ## 🚀 Key Features
 
 * **Logic Schema Enforcement:** Forces the model to follow specific argumentative structures (e.g., Dialectical Deepening).
-* **9 Trap Protocols (Black-box):** A proprietary set of logic rules (e.g., Modality Shift, Topological Error) to create sophisticated distractors and verify internal consistency.
+* **11 Trap Protocols (Black-box):** A proprietary set of logic rules (e.g., Modality Shift, Topological Error) to create sophisticated distractors and verify internal consistency.
 * **Self-Auditing Pipeline:** Includes a mandatory "Audit Report" phase where the model self-corrects its logical gaps.
 
 ## 📂 Structure
