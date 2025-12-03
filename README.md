@@ -53,7 +53,6 @@ graph TD
 Synapsenforcer/
 ├── core_logic/
 │   ├── generator_rules.py    # Phase 1: Passage & Problem Construction
-│   └── solver_rules_v2.py    # Phase 2: Audit & Debugging Protocol (Updated)
 ├── examples/                 # Case Studies (High-Quality Benchmarks)
 │   ├── Case_01_Legal_Tech.md       # The Paradox of Automated Enforcement
 │   ├── Case_02_Phenomenology.md    # Body Schema vs Body Image
