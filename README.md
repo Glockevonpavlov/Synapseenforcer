@@ -7,7 +7,7 @@
 ## 📌 Overview
 **Synapseenforcer** is a systematic prompting framework designed to produce **high-density, logically rigorous texts** comparable to high-stakes reasoning exams (e.g., LSAT, LEET).
 
-Unlike standard prompts that rely on the LLM's probability distribution, this framework enforces strict **"Logic Schemas"** and **"9 Trap Protocols"** to prevent hallucinations in causal reasoning and mathematical modeling.
+Unlike standard prompts that rely on the LLM's probability distribution, this framework enforces strict **"Logic Schemas"** and **"11 Trap Protocols"** to prevent hallucinations in causal reasoning and mathematical modeling.
 
 이 프로젝트는 LLM이 생성하는 텍스트의 논리적 밀도를 극한으로 높이고, 인과관계 오류를 방지하기 위해 설계된 **'논리 제약 강제 프레임워크'**입니다. 동아시아 최고 난이도 적성시험인 **LEET(법학적성시험)** 수준의 지문을 생성하며 검증되었습니다.
 
