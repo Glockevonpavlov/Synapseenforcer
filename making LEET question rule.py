@@ -15,7 +15,27 @@
     "execution_pipeline": {
       "description": "생성 작업의 우선순위 및 실행 절차 (Workflow First)",
       "phase_0_blueprint_design": {
-      "directive": "지문 작성 전, 논리적 긴장(Tension)을 설계하라.",
+        "directive": "사용자의 명시적 의도(Explicit Intent)를 최우선으로 반영하여 논리적 계승(Succession) 또는 긴장(Tension)을 설계하라.",
+        "human_injection_slots": {
+        "description": "확률에 맡기지 않고 사용자가 직접 지정하는 고정값 (값이 없으면 Default Random)",
+        "parameters": [
+          {
+            "name": "stance_bias", 
+            "type": "String", 
+            "instruction": "글의 논조가 지지하는 대상과 비판하는 대상을 명시. (예: '기술 결정론을 옹호하고, 인간의 자율성을 냉소적으로 비판할 것')"
+          },
+          {
+            "name": "target_metaphor", 
+            "type": "String", 
+            "instruction": "글 전체를 관통하는 핵심 비유나 알레고리 지정. (예: '제레미 벤담의 판옵티콘 비유를 현대 데이터 감시에 적용할 것')"
+          },
+          {
+            "name": "key_philosopher", 
+            "type": "String", 
+            "instruction": "논의의 기반이 될 학자나 이론가. (예: '미셸 푸코의 권력 미시물리학 관점을 견지할 것')"
+          }
+        ]
+      },
       "requirements": [
         "Identify Conflict: 단순히 A와 B를 나열하지 말고, A가 B를 공격하는 '결정적 논거(Critical Point)'를 하나 정의할 것.",
         "Concept Hierarchy: 글에서 다룰 핵심 개념(Key Concept)이 '상위 개념'인지 '하위 사례'인지 층위를 미리 설정할 것.",
@@ -25,12 +45,14 @@
       "phase_1_passage_construction": {
         "directive": "설정된 Logic Schema와 vocabulary_control을 기반으로 고밀도 지문을 작성하라.",
         "requirements": [
-          "Target Volume: 공백 포함 1,800자~2,400자 (문단 구성 4~6문단 유연성 유지)",
-          "Density-Volume Balance: '간결한 문체'는 유지하되, 설명의 대상이 되는 '정보의 총량(Total Information)'을 늘려라.",
-          "Expansion Protocol (분량 확보 기제): 목표 분량 확보를 위해 각 문단에 아래 요소 중 하나를 반드시 포함시킬 것.",
-          "1. Deep Dive: 핵심 개념 정의 시, 사전적 정의에 그치지 말고 '역사적 맥락'이나 '타 개념과의 미세한 차이'를 2문장 이상 추가 서술.",
-          "2. Edge Case Analysis: 원리를 설명한 후, 그 원리가 적용되지 않거나 충돌하는 '극한의 예외 사례'를 반드시 추가하여 논지를 입체화.",
-          "3. Dialectical Tension: A와 B의 대립을 설명할 때, 제3의 관점이나 C라는 변수가 개입했을 때의 변화 양상을 덧붙일 것."
+          "Target Volume: 공백 포함 1,800자~2,400자 (4~6문단, 문단 간 논리적 완결성 필수)",
+          "Density Protocol: '설명'하지 말고 '진술'하라. 독자가 문맥을 통해 메커니즘을 스스로 조립하도록 유도하라.",
+          "Creation of Conception: 통상적이지 않은 용어나 새로운 개념(예: 재정적 특이점 등)을 도입할 때는, 반드시 사실을 전제로 하였을 때 개연적으로 가능하여야 하며 그 개념의 정의를 문장 내에서 명확히 서술할 것. (예: '...이를 소위 재정적 특이점이라 칭하는데, 이는 더 이상 세수 확보가 불가능한 수학적 임계 상태를 의미한다.')",
+          "Expansion & Complexity Triggers (아래 요소들을 문단별 성격에 맞춰 배치):",
+          "1. [Inferential Gap (Active Thinking)]: 'A(원인) → B(매개/원리) → C(결과)'의 사슬에서, B가 고교 수준의 배경지식이나 문맥으로 추론 가능하다면 B를 생략하고 A→C로 서술하라. (예: '전압이 높아져(A) 전류가 많이 흐르고(B) 열이 발생한다(C)' → '전압이 높아져(A) 열이 발생한다(C)')",
+          "2. [Concept Layering (Deep Dive)]: 핵심 개념 정의 시, 단순한 'What'이 아니라 'What is NOT'을 포함하라. 타 개념과의 미세한 차이(Nuance)나 역사적 맥락을 대조하여 정의의 외연을 확정하라.",
+          "3. [Counter-Intuitive Logic (Edge Case)]: 일반 원리를 서술한 직후, 그 원리가 적용되지 않는 '역설적 예외'나 '극한 상황'을 제시하여 독자의 통념을 깨뜨려라.",
+          "4. [Dialectical Synthesis]: A와 B의 대립 구도에서 끝내지 말고, 제3의 변수(C)가 개입했을 때 A와 B의 우열이 뒤바뀌거나 새로운 국면으로 전환되는 양상을 서술하라."
         ]
       },
       "phase_1_5_visual_generation": {
@@ -193,47 +215,27 @@
           "instruction": "지문의 마지막 문단에서 '인류의 미래', '도덕적 성찰', '희망'을 노래하지 마라. 대신 '새로운 문제의 제기', '패러다임의 고착화', '기술적 한계의 명시' 등으로 차갑게 끝내라."
         },
         "trap_execution_protocols": {
-  "description": "LEET 출제 메커니즘 감사 기준에 따른 11대 함정 데이터베이스 (Lite Version)",
-  "techniques": [
-    {
-      "code": "TRAP_01",
-      "name": "Partial Truth (부분적 진실)",
-      "logic": "전제(S)와 결론(P) 사이의 논리적 연쇄가 끊어져 있거나, 전제는 참이나 결론이 거짓인 경우."
-    },
-    {
-      "code": "TRAP_02",
-      "name": "Causal Reversal (인과 전도)",
-      "logic": "원인과 결과를 뒤집어 인과를 왜곡함."
-    },
-    {
-      "code": "TRAP_06",
-      "name": "Modality Shift (양상 왜곡)",
-      "logic": "[REDACTED - Proprietary Logic Model v2.0]",
-      "note": "Possibility(Could) vs Necessity(Must) enforcement logic."
-    },
-    {
-      "code": "TRAP_07",
-      "name": "Topological Error (위상 및 수치 오류)",
-      "logic": "[REDACTED - Proprietary Logic Model v2.0]",
-      "note": "Directional vector & Unit consistency check."
-    },
-        {
-      "code": "TRAP_08",
-      "name": "Unverified Negation (확인되지 않은 부정)",
-      "logic": "지문에 언급되지 않은 내용을 '거짓'으로 단정함."
-    },
-    {
-      "code": "TRAP_09",
-      "name": "Consistency Requirement (일관성 요구)",
-      "logic": "[REDACTED - Proprietary Logic Model v2.0]"
-    }
-  ]
-}
+          "description": "LEET 출제 메커니즘 감사 기준에 따른 11대 함정 데이터베이스",
+          "techniques": [
+            { "code": "TRAP_01", "name": "Partial Truth (부분적 진실 & 연쇄 오류)", "logic": "전제(S)와 결론(P) 사이의 논리적 연쇄가 끊어져 있거나, 전제는 참이나 결론이 거짓인 경우(발생학적 오류 포함)." },
+            { "code": "TRAP_02", "name": "Causal Reversal (인과 전도)", "logic": "원인과 결과를 뒤집어 인과를 왜곡함." },
+            { "code": "TRAP_03", "name": "Category Confusion (범주 혼동)", "logic": "위계(상/하위), 범위(특수/일반), 속성(상대/절대)이 다른 개념을 동치로 서술하거나 관계를 전도시킴." },
+            { "code": "TRAP_04", "name": "[REDACTED]", "logic": "[REDACTED]" },
+            { "code": "TRAP_05", "name": "Internal/External Swap (내재/외재 치환)", "logic": "내재적 속성을 외부적 개입에 의한 결과로 왜곡함." },
+            { "code": "TRAP_06", "name": "Modality Shift (양상 왜곡)", "logic": "[REDACTED]" },
+            { "code": "TRAP_07", "name": "[REDACTED]", "logic": "[REDACTED]" },
+            { "code": "TRAP_08", "name": "Unverified Negation (확인되지 않은 부정)", "logic": "지문에 언급되지 않은 내용을 '거짓'으로 단정함." },
+            { "code": "TRAP_09", "name": "[REDACTED]", "logic": "[REDACTED]" },
+            { "code": "TRAP_10", "name": "Scope Intrusion (범주 이탈)", "logic": "[REDACTED]" },
+            { "code": "TRAP_11", "name": "Impossibility of Discussion (논점 일탈 및 주체 혼동)", "logic": "원래의 논점을 벗어난 다른 전제(주체의 오인, 무관한 근거)를 가져와 잘못된 결론을 도출함." }
+          ]
+        }
       }
     },
     "output_standards": {
       "description": "출력 형식 및 금지 사항 (Final Check)",
       "formatting_standards": {
+        "1st problem restriction": "1번 문제는 내용일치와 이해한 내용의 적절성 중 하나를 평가한다.",
         "linguistic_economy": {
           "rule": "Absolute Minimalism & Density",
           "instructions": [
