@@ -17,6 +17,58 @@
 
 결국 기술적 합리성이 법적 타당성을 잠식하는 현상은, 인간이 만든 도구가 인간의 판단을 배제하는 소외(Alienation)의 극한이다. 우리는 효율성이라는 미명 하에, 기계가 내린 처분에 대해 "시스템이 그렇게 결정했다"는 동어반복적 정당화만을 남긴 채, 판단의 주체성을 알고리즘이라는 블랙박스 속으로 유기하고 있는 것이다.
 
+[시각 자료 데이터]
+
+JSON
+
+
+
+{
+
+"type": "concept_graph",
+
+"title": "법적 결정 시스템의 효용 함수 비교",
+
+"axis": {
+
+"x_axis": "결정의 자동화 수준 (Automation Level, A)",
+
+"y_axis": "사회적 효용 (Social Utility, U)"
+
+},
+
+"data_points": [
+
+{
+
+"segment": "구간 I (초기)",
+
+"description": "자동화 수준(A)이 증가함에 따라 신속성과 비용 절감 효과로 인해 사회적 효용(U)이 급격히 증가함 (U ∝ A)."
+
+},
+
+{
+
+"segment": "지점 P (임계점)",
+
+"description": "변수 압축으로 인한 구체적 타당성 상실 비용이 효율성 증가분을 상쇄하기 시작하는 지점."
+
+},
+
+{
+
+"segment": "구간 II (과잉 자동화)",
+
+"description": "자동화 수준(A)이 임계점을 초과하면, 재량권 소멸로 인한 경직성 비용(Rigidity Cost)이 급증하여 사회적 효용(U)은 오히려 감소함 (U ∝ -A^2)."
+
+}
+
+],
+
+"interpretation_guide": "알고리즘 행정의 도입은 구간 I을 목표로 하지만, 기술 만능주의는 시스템을 구간 II로 밀어넣어 '구성의 오류'를 범하게 한다."
+
+}
+
 ---
 
 ## 2. Generated Questions (생성 문제)
@@ -50,23 +102,89 @@ A국은 범죄 재범 위험성을 예측하여 가석방 여부를 결정하는
 
 ## 3. Audit Report (감사 보고서)
 
-```json
+[출제 메커니즘 감사 보고서 (Audit Report)]
+
+JSON
+
+
 {
 "review_meta": {
 "difficulty_level": "최상 (Killer)",
 "difficulty_rationale": "법철학적 개념(재량, 타당성)과 수리적 모델링(함수, 오차항)을 유기적으로 결합해야 풀 수 있으며, 선지 전반에 고난도 TRAP 코드(03, 07, 10, 11)가 복합 적용됨.",
 "core_architectonics": "인간의 재량(Analogue/Discretion) vs 기계의 알고리즘(Digital/Determinism)의 이항 대립과 그 사이의 존재론적 간극."
 },
+"cognitive_reconstruction": {
+"flow_log": [
+"1문단: 법적 안정성과 구체적 타당성의 상충 관계(Trade-off)를 ㉠과 ㉡의 대립으로 정의.",
+"2문단: 행정 처분을 수식 R = f(x) + ε로 모델링하여 ε(재량)의 유무가 핵심 차이임을 도출.",
+"3문단: 알고리즘의 '압축' 과정에서 발생하는 ㉢(임의적 배제)과 가치 중립성의 허구 폭로.",
+"4문단: 스마트 계약의 비가역성과 사후적 구제 수단의 부재로 인한 위기 고조.",
+"결문: 기술적 합리성이 인간의 주체성을 잠식하는 디스토피아적 현실 진단."
+
+]
+
+},
 "item_dissection": [
 {
+"question_index": 1,
+"applied_trap_code": "TRAP_02 (Causal Reversal) & TRAP_05 [REDACTED - Proprietary Logic Model v2.0]",
+"option_analysis": [
+{
+"option_num": 1,
+"status": "Correct",
+"audit_result": "Concept Verification",
+"commentary": "지문 1문단에서 ㉠(해석적 재량)은 법적 안정성을 훼손하더라도 구체적 타당성을 확보하는 기제라고 명시함. Trade-off 관계를 정확히 서술."
+},
+
+{
+"option_num": 2,
+"status": "Trap",
+"audit_result": "Time-Phase Error",
+"commentary": "㉡은 '사후적 판단'을 '사전적 확정'으로 전복시킨다고 지문에 명시됨. 시간적 선후 관계를 ㉠과 동일하게 유지한다는 서술은 명백한 오류."
+},
+
+{
+"option_num": 3,
+"status": "Trap",
+"audit_result": "TRAP_03 [REDACTED - Proprietary Logic Model v2.0]",
+"commentary":"[REDACTED - Proprietary Logic Model v2.0]"
+}
+]
+},
+{
 "question_index": 2,
-"applied_trap_code": "TRAP_07 (Topological Error/Limit Inf) & TRAP_12 (Derivative Error)",
+"applied_trap_code": "TRAP_07 [REDACTED - Proprietary Logic Model v2.0] & TRAP_12 [REDACTED - Proprietary Logic Model v2.0]",
 "option_analysis": [
 {
 "option_num": 3,
 "status": "Trap",
-"audit_result": "TRAP_07 (Topological/Limit Error)",
-"commentary": ""[REDACTED - Proprietary Logic Model v2.0]."
+"audit_result": "TRAP_07 [REDACTED - Proprietary Logic Model v2.0]",
+"commentary": "킬러 선지. [REDACTED - Proprietary Logic Model v2.0]"
+},
+
+{
+"option_num": 4,
+"status": "Correct",
+"audit_result": "Logic Synthesis",
+"commentary": "[시각 자료]의 구간 II에서 효용이 감소하는 원인은 '경직성 비용'의 증가 때문이며, 이는 지문의 ε(재량)이 0으로 수렴하여 유연성이 상실된 상황과 정확히 대응됨."
+}
+]
+},
+{
+"question_index": 3,
+"applied_trap_code": "TRAP_05 [REDACTED - Proprietary Logic Model v2.0] & TRAP_11 [REDACTED - Proprietary Logic Model v2.0]",
+"option_analysis": [
+{
+"option_num": 2,
+"status": "Correct",
+"audit_result": "Contextual Application",
+"commentary": "지문 3문단에서 f는 가치 중립적이지 않으며, 개발 과정에서 필연적으로 가치 판단(또는 배제)이 개입됨을 역설함. 따라서 '중립적 설계'라는 항변을 비판하는 논리가 가장 적절함."
+},
+{
+"option_num": 5,
+"status": "Trap",
+"audit_result": "TRAP_06 (Modality Shift)",
+"commentary": "[REDACTED - Proprietary Logic Model v2.0]"
 }
 ]
 }
