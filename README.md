@@ -58,6 +58,7 @@ Synapsenforcer/
 │   ├── Case_01_Legal_Tech.md       # The Paradox of Automated Enforcement
 │   ├── Case_02_Phenomenology.md    # Body Schema vs Body Image
 │   └── Case_03_Quantum_Ontology.md # EPR Paradox & Bell's Inequality
+│   └── Case_04_Procrustean Bed of Social Science.md  # Social Science
 └── assets/
     └── logic_diagram.png
 ```
