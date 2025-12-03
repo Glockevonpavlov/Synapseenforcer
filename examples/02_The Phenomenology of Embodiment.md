@@ -1,10 +1,19 @@
 # Case Study 02: The Phenomenology of Embodiment
+
 > **Target Domain:** Philosophy (Phenomenology)
+
 > **Applied Logic:** Binary Opposition, Edge Case Analysis
+
 > **Constraint:** Concept Hierarchy (Body Schema vs. Body Image)
 
+
+
 ## 1. Generated Passage (생성 지문)
+
+
 ### 신체 도식과 환상지: '나는 생각한다'에서 '나는 할 수 있다'로
+
+
 서구 근대 철학의 아버지라 불리는 데카르트에게 신체는 연장(extension)을 가진 물질적 대상에 불과했다. 그의 이원론적 도식 안에서 정신은 사유하는 주체인 반면, 신체는 정신의 명령을 수행하거나 기계적 법칙에 따라 작동하는 객체였다. 이러한 관점, 즉 주지주의(Intellectualism)와 경험주의(Empiricism)의 전통 위에서 신체에 대한 지각은 '대상에 대한 표상'이나 '생리학적 감각 데이터의 총합'으로 환원된다. 이들에게 공간은 xyz축으로 이루어진 기하학적 좌표계이며, 내 몸은 그 좌표의 특정 위치를 점유하는 물체일 뿐이다.
 
 그러나 모리스 메를로-퐁티는 『지각의 현상학』을 통해 이러한 고전적 사유를 전복한다. 그는 신체가 세계를 관조하는 대상이 아니라, 세계를 향해 열려 있는 '지각의 장(field)'이자 '실존의 닻'이라고 주장한다. 그에 따르면 우리는 신체를 '통해' 세계를 지각하는 것이 아니라, 신체 '로서' 세계에 존재한다. 여기서 등장하는 핵심 개념이 바로 **㉠'신체 도식(Body Schema)'**과 **㉡'신체 이미지(Body Image)'**의 엄밀한 구분이다.
