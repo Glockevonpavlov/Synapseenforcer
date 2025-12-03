@@ -30,6 +30,9 @@ Unlike standard prompts that rely on the LLM's probability distribution, this fr
     * **Visual Integrity:** Ensures logical isomorphism between textual arguments and JSON-based charts/graphs.
     * **Symbolic Algebra:** Treats abstract symbols (e.g., ㉠, $R=f(x)$) as immutable variables to prevent contextual drifting.
 
+* As a result, **By strictly defining logic schemas and trap taxonomies,** this prompt creates a controlled generation environment that significantly reduces model hallucinations.
+
+
 > *Note: The specific prompt instructions for these protocols are redacted in this public repository to protect intellectual property.*
 
 ## 📂 Project Structure
