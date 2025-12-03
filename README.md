@@ -1,4 +1,4 @@
-# Synapseenforcer 🧠
+# Synapsenforcer 🧠
 > **A Logical Constraint Enforcement Framework for LLMs**
 > LLM의 논리적 환각(Hallucination)을 제어하고 고밀도 추론 텍스트를 생성하는 프롬프트 아키텍처
 
