@@ -39,7 +39,7 @@ graph TD
 * **⚡ Structural & Causal Traps:**
     * Detects and generates sophisticated logical fallacies such as **Causal Reversal** (reversing cause and effect) and **Partial Truths** (breaking logical chains).
 * **⚖️ Semantic & Modal Traps:**
-    * Strictly controls the **Modality Shift** (e.g., distinguishing between 'possibility' and 'necessity', 'is' and 'ought') to prevent subtle semantic hallucinations.
+    * Strictly controls the **Modality Shift**
 * **📊 Data & Symbolic Traps:**
     * **Visual Integrity:** Ensures logical isomorphism between textual arguments and JSON-based charts/graphs.
     * **Symbolic Algebra:** Treats abstract symbols (e.g., ㉠, $R=f(x)$) as immutable variables to prevent contextual drifting.
